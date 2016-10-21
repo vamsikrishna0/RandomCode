@@ -27,6 +27,10 @@ public class QuickSort {
 		int pivot = p[hi];
 		int tmp;
 		int i = lo;
+
+		// Here 2 pointers start from the left side of the array(lo) and 
+		// We iterate over j and i is incremented when we find an element(at j) less than the pivot and 
+		// exchange it with the element at i. 
 		for (int j = lo; j <= hi - 1; j++) {
 			if (p[j] <= pivot) {
 				tmp = p[i];
@@ -36,6 +40,7 @@ public class QuickSort {
 			}
 		}
 
+		//The pivot is copied to the appropriate position
 		tmp = p[hi];
 		p[hi] = p[i];
 		p[i] = tmp;
