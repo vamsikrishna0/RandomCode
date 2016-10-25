@@ -30,8 +30,6 @@ public class SimilarStrings {
                 }
             }
 
-//            ArrayList<Integer> setOfDissismilarIndices =  new ArrayList<>();
-
             HashMap<Integer, ArrayList<Integer>> setOfSimilarIndices = new HashMap<>();
             for (ArrayList<Integer> sim : freq.values()) {
                 int firstInt = sim.get(0);
