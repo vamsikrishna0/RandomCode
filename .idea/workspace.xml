@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="391ae9a8-aa07-464e-ae11-fb2551a8bb4c" name="Default" comment="First commit from IDEA">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RandomCode/booking/com/Destination.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RandomCode/booking/com/Question2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/RandomCode/booking/com/Solution.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Solution.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/booking/com/Question2.java" afterPath="$PROJECT_DIR$/src/interview/booking/com/Question2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/booking/com/Solution.java" afterPath="$PROJECT_DIR$/src/interview/booking/com/Solution.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RandomCode/Solution.class" afterPath="$PROJECT_DIR$/out/production/RandomCode/Solution.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RandomCode/interview/Solution.class" afterPath="$PROJECT_DIR$/out/production/RandomCode/interview/Solution.class" />
+    <list default="true" id="391ae9a8-aa07-464e-ae11-fb2551a8bb4c" name="Default" comment="Added leet code">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RandomCode/SimilarStrings.txt" afterPath="$PROJECT_DIR$/out/production/RandomCode/SimilarStrings.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimilarStrings.txt" afterPath="$PROJECT_DIR$/src/SimilarStrings.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/interview/Solution.java" afterPath="$PROJECT_DIR$/src/interview/Solution.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Solution.java" afterPath="$PROJECT_DIR$/src/Solution.java" />
     </list>
     <ignored path="RandomCode.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/src/leetcode/TwoSum.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.24817519">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -797,7 +787,13 @@
       <option name="project" value="LOCAL" />
       <updated>1477013002672</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added leet code">
+      <created>1482847087071</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1482847087071</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -846,7 +842,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit from IDEA" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit from IDEA" />
+    <MESSAGE value="Added leet code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added leet code" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -864,8 +861,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1141#1142#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1198#1199#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -881,6 +878,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -895,6 +895,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1000,6 +1003,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16451614">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1047,8 +1053,8 @@
         <state vertical-scroll-proportion="0.41396105">
           <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
           <folding>
-            <element signature="e#1141#1142#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1198#1199#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1080,7 +1086,7 @@
     <entry file="file://$PROJECT_DIR$/src/leetcode/TwoSum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24817519">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
