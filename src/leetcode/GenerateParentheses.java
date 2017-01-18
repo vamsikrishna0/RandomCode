@@ -20,6 +20,8 @@ public class GenerateParentheses {
             System.out.println(b);
         }
     }
+
+    //**better implementation exists
     public List<String> generateParenthesis(int n) {
         List<String> res = new ArrayList<>();
         if(n == 0)

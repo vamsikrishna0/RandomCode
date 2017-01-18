@@ -9,7 +9,7 @@ public class LargestAbsoluteDirectoryPath {
     public static void main(String[] args) {
         LargestAbsoluteDirectoryPath x = new LargestAbsoluteDirectoryPath();
         String str = "dir1\n blah.txt\n blah2.png\n dir\n  dir4\n   fuck.jpeg\n blah.png\n dir2\n  b.txt\ndir3";
-        System.out.println(x.solution(str));
+        System.out.println(x.lengthLongestPath(str));
 //        String blah = "  bhjds";
 //        System.out.println(blah.trim());
 //        System.out.println(blah.charAt(0) == ' ');
@@ -28,7 +28,7 @@ dir3
 */
     }
 
-    public int solution(String S) {
+    public int lengthLongestPath(String S) {
         // write your code in Java SE 8
         String[] files = S.split("\n");
         int len = files.length;
@@ -38,7 +38,7 @@ dir3
 
         while (i < len) {
             String fileName = files[i];
-            System.out.println(fileName);
+//            System.out.println(fileName);
             String name = fileName.trim();
             int currentIndentation = countLeadingSpaces(fileName);
 
@@ -81,6 +81,7 @@ dir3
             return false;
     }
 
+    //Given a file name with leading spaces, return the count of them
     int countLeadingSpaces(String file) {
         int j = 0;
         for (int i = 0; i < file.length(); i++) {
