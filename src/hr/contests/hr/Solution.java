@@ -1,9 +1,9 @@
-package hr.hr;
+package hr.contests.hr;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class QuickSort1 {
+public class Solution {
 
 	static void partition(int[] ar) {
 		int p = ar[0];
@@ -41,7 +41,7 @@ public class QuickSort1 {
 			ar[i] = in.nextInt();
 		}
 		partition(ar);
- 
+
 		in.close();
 	}
 
@@ -51,6 +51,5 @@ public class QuickSort1 {
 		}
 		System.out.println("");
 	}
-
 
 }

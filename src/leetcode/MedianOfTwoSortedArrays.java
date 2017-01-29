@@ -11,106 +11,33 @@ public class MedianOfTwoSortedArrays {
 
 
     }
-    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+    public static int findKthSmallest(int[] a, int m, int begin1, int[] b, int n, int begin2, int k) {
 
-        //Combining them to find the median
-        /*int sum = sumOfLen;
-        while(sumOfLen > 0){
-            if(i < len1 && j < len2){
-                if (nums1[i] < nums2[j]) {
-                    combinedArray[sum-sumOfLen] = nums1[i];
-                    i++;
-                }else{
-                    combinedArray[sum-sumOfLen] = nums2[j];
-                    j++;
-                }
-            }else if (i >= len1){
-                combinedArray[sum-sumOfLen] = nums2[j];
-                j++;
-            }else if (j >= len2){
-                combinedArray[sum-sumOfLen] = nums1[i];
-                i++;
-            }
+        if (m > n)
+            return findKthSmallest(b, n, begin2, a, m, begin1, k);
+        if (m == 0)
+            return b[begin2 + k - 1];
+        if (k == 1)
+            return Integer.min(a[begin1], b[begin2]);
+        int partA = Integer.min(k / 2, m), partB = k - partA;
+        if (a[begin1 + partA - 1] == b[begin2 + partB - 1])
+            return a[begin1 + partA - 1];
+        else if (a[begin1 + partA - 1] > b[begin2 + partB - 1])
+            return findKthSmallest(a, m, begin1, b, n - partB, begin2 + partB, k - partB);
+        else
+            return findKthSmallest(a, m - partA, begin1 + partA, b, n, begin2, k - partA);
 
-            sumOfLen--;
-        }
+    }
 
-        if (sum % 2 == 0) {
-            return (combinedArray[sum/2] + combinedArray[sum/2 -1]) / 2.0;
-        }else{
-            return combinedArray[sum/2];
-        }*/
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int len1 = nums1.length, len2 = nums2.length, sumLen = len1 + len2;
+        if (sumLen % 2 != 0) {
 
-        int len1 = nums1.length;
-        int len2 = nums2.length;
-        int[] combinedArray = new int[len1+len2];
-
-        int i = 0, j=0;
-
-        int sumOfLen = len1 + len2;
-        int mid = 0;
-
-        if (sumOfLen % 2 == 0) {
-            mid = (sumOfLen / 2) - 1;
+            return findKthSmallest(nums1, len1, 0, nums2, len2, 0, sumLen / 2 + 1);
         } else {
-            mid = sumOfLen / 2;
+            return (findKthSmallest(nums1, len1, 0, nums2, len2, 0, sumLen / 2)
+                    + findKthSmallest(nums1, len1, 0, nums2, len2, 0, sumLen / 2 + 1)) / 2.0;
         }
 
-        for (;mid > 0; mid--) {
-            if(i < len1 && j < len2){
-                if (nums1[i] < nums2[j]) {
-                    i++;
-                }else{
-                    j++;
-                }
-
-                if(mid == 0){
-                    if (sumOfLen % 2 == 0) {
-                        return (nums2[j + 1] + nums2[j]) / 2.0;
-                    }else {
-                        return Math.min(nums2[j], nums1[i]);
-                    }
-                }
-            }else if (i >= len1){
-                j++;
-                if(mid == 0){
-                    if (sumOfLen % 2 == 0) {
-                        return (nums2[j + 1] + nums2[j]) / 2.0;
-                    }else return (nums2[j]);
-                }
-            }else if (j >= len2){
-                i++;
-                if(mid == 0){
-                    if (sumOfLen % 2 == 0) {
-                        return (nums1[i + 1] + nums1[i]) / 2.0;
-                    }else return (nums1[i]);
-                }
-            }
-        }
-
-
-        if (sumOfLen % 2 == 0) {
-            if (i >= len1){
-
-                return (nums2[j + 1] + nums2[j]) / 2.0;
-            }
-
-            else if (j >= len2){
-
-                return (nums1[i + 1] + nums1[i]) / 2.0;
-            }
-
-            else{
-                return (nums1[i] + nums2[j]) / 2.0;
-            }
-
-        } else {
-            if (i >= len1)
-                return (nums2[j]);
-            else if (j >= len2)
-                return (nums1[i]);
-            else
-                return Math.min(nums1[i], nums2[j]);
-        }
     }
 }

@@ -28,18 +28,24 @@ public class RegularExpressionMatching {
            4. Recur on each partial solution assuming an added part of the problem solved.
            5. Return once a solution is found, back until the root of the recursion stack.
         * */
+
+
+        //Pattern is empty string. Return true if string is empty, else false
         if (p.isEmpty())
             return (s.isEmpty());
 
+        //Take first char of pattern
         char t = p.charAt(0);
+        //length is 1 means the pattern is either a '.' or an absolute character match. All other cases its false
         if (p.length() == 1) {
-            return !(s.length() > 1 || s.isEmpty()) && (t == '.' || (s.charAt(0) == t));
+            return (s.length() == 1) && (t == '.' || (s.charAt(0) == t));
         }
 
         if (p.charAt(1) != '*') {
             return !s.isEmpty() && !(t != '.' && s.charAt(0) != t) && (isMatch(s.substring(1), p.substring(1)));
 
         } else {
+            //maxLength is last index of the string matching this(first char followed by a '*') particular regex token
             int maxLength = 0;
             if (t == '.')
                 maxLength = s.length();
@@ -49,9 +55,10 @@ public class RegularExpressionMatching {
                 }
             }
 
-            String subp = p.substring(2);
+            //removing this token and recursing on every probable substring, starting from the largest matched to least
+            String subp = p.substring(2);//sub pattern after removing the first token
             for (int i = maxLength; i >= 0; i--) {
-                if (isMatch(s.substring(i), subp))
+                if (isMatch(s.substring(i), subp)) //recurse by removing every substring that matched from the original string
                     return true;
             }
             /*A concise code of the previous block

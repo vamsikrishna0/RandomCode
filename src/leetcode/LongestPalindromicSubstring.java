@@ -45,9 +45,11 @@ public class LongestPalindromicSubstring {
         }
         return R - L - 1;
     }
+
+
     public String longestPalindromeDP(String s) {
         int len = s.length();
-        String lp = ""+s.charAt(0);
+        String lp = Character.toString(s.charAt(0));
         int lengthOfLp = 1;
         boolean[][] p = new boolean[len][len];
 

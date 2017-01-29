@@ -1,4 +1,4 @@
-package hr.hr;
+package hr.contests.hr;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

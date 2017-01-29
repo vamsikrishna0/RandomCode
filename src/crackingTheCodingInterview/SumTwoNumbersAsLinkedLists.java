@@ -8,8 +8,12 @@ import java.util.PriorityQueue;
  * Created by Vamsi on 1/9/2017.
  */
 public class SumTwoNumbersAsLinkedLists {
-    PriorityQueue<Integer> q = new PriorityQueue<>();
+    /*
+    Sum two numbers with digits given as linkedlists, from ones place to further up
 
+    Approach:
+    Use a helper method, which uses recursion to do the individual sum of digits and generate a carry.
+     */
     public static void main(String[] args) {
         SumTwoNumbersAsLinkedLists temp = new SumTwoNumbersAsLinkedLists();
         ListNode x = new ListNode(5);

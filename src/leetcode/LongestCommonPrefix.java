@@ -7,7 +7,9 @@ public class LongestCommonPrefix {
     //Longest common prefix for an array of strings
     public static void main(String[] args) {
         LongestCommonPrefix x = new LongestCommonPrefix();
-        String[] str = new String[1];
+        String[] str = new String[2];
+        str[0] = "aabcd";
+        str[1] = "aabcd";
         System.out.println(x.longestCommonPrefix(str));
     }
 

@@ -5,26 +5,26 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ThreeSum {
-    //Given an array find all non-repeated trio of numbers which sum up to 0.
+    // Given an array find all non-repeated trio of numbers which sum up to 0.
     public static void main(String[] args) {
         ThreeSum x = new ThreeSum();
         int[] arr = {-1, 0, 1, 2, -1, -4};
-
     }
 
-    //A O(n^2) algo. Which checks for every pair to see if the sum is 0;
+    // A O(n^2) algo. Which checks for every pair to see if the sum is 0;
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
 
         if(nums == null || nums.length<3)
             return res;
 
-        Arrays.sort(nums);
+        Arrays.sort(nums);//sort method uses quick sort so no extra space used(may be a logn for recursion stack).
+                          // O(nlogn) doesn't matter because the algo is overall n^2
         int a, b, c;
         int len = nums.length;
         for (int i = 0; i < len - 2; i++) {
 
-            //Handles repeated elements:
+            // Handles repeated elements:
             // If a previous element was part of the trio, the next equal element is also part of it.
             // Coz in a sorted array equal elements occur next to each other
             if (i == 0 || nums[i] > nums[i - 1]) {
