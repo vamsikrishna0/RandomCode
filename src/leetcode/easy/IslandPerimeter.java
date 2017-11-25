@@ -8,7 +8,8 @@ public class IslandPerimeter {
         int[][] arr = {{0,1,0,0}, {1,1,1,0}, {0,1,0,0}, {1,1,0,0}};
         int[][] arr2 = {{1,0}};
         IslandPerimeter x = new IslandPerimeter();
-        System.out.println(x.islandPerimeter2(arr));
+        System.out.println(Math.sqrt(Integer.MAX_VALUE));
+
     }
     public int islandPerimeter(int[][] grid) {
         int perimeter = 0;

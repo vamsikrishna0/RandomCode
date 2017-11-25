@@ -1,4 +1,6 @@
-package leetcode;
+package leetcode.medium;
+
+import leetcode.ListNode;
 
 public class AddTwoNumbers {
     //Given two numbers as a lnked list representaion of their digits, find the sum with the same representation
@@ -12,6 +14,7 @@ public class AddTwoNumbers {
             z = z.next;
         }
     }
+
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         boolean carry = false;
@@ -78,6 +81,31 @@ public class AddTwoNumbers {
         }
 
         return head;
+    }
+
+    //Leetcode soln. Optimized in code. Succinct. But uses linear space.
+    public ListNode addTwoNumbers2(ListNode l1, ListNode l2){
+        ListNode c1 = l1;
+        ListNode c2 = l2;
+        ListNode sentinel = new ListNode(0);
+        ListNode d = sentinel;
+        int sum = 0;
+        while (c1 != null || c2 != null) {
+            sum /= 10;
+            if (c1 != null) {
+                sum += c1.val;
+                c1 = c1.next;
+            }
+            if (c2 != null) {
+                sum += c2.val;
+                c2 = c2.next;
+            }
+            d.next = new ListNode(sum % 10);
+            d = d.next;
+        }
+        if (sum / 10 == 1)
+            d.next = new ListNode(1);
+        return sentinel.next;
     }
 }
 

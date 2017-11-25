@@ -1,10 +1,10 @@
-package leetcode;
+package leetcode.medium;
 
 import java.util.HashMap;
 import java.util.HashSet;
 
 public class LongestSubstringWithNonRepeatingChars {
-    //Given a string find the longest substring with non repeating characters
+    //Given a string find the length of longest substring with non repeating characters
 
     /*  A two pointer problem approach or Sliding window approach
 

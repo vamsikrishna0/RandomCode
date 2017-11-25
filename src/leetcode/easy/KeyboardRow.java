@@ -33,7 +33,8 @@ public class KeyboardRow {
             else if(word.length() > 1){
                 boolean p = true;
                 for (int i = 1; i < word.length(); i++) {
-                    if(charMap.get(Character.toLowerCase(word.charAt(i))) != charMap.get(Character.toLowerCase(word.charAt(0)))){
+                    if(!charMap.get(Character.toLowerCase(word.charAt(i)))
+                            .equals(charMap.get(Character.toLowerCase(word.charAt(0))))){
                         p = false;
                         break;
                     }

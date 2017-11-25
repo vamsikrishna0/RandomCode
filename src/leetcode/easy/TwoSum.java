@@ -1,7 +1,5 @@
-package leetcode;
+package leetcode.easy;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.HashMap;
 
 /**
@@ -28,7 +26,7 @@ public class TwoSum {
      * O(1) extra space for O(nlogn) time
      */
     public int[] twoSum(int[] nums, int target) {
-        int j=nums.length;
+        int j = nums.length;
 
         //Hashtable keeps track of the occurrence of each number and breaks and returns when the complement of a given number is found.
         //Just one pass through the data.
