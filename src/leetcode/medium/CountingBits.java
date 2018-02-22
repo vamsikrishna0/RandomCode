@@ -4,6 +4,7 @@ package leetcode.medium;
  * Created by Vamsi on 1/21/2017.
  */
 public class CountingBits {
+    //Classic case of DP.
     public int[] countBits(int num) {
         if(num < 0)
             return null;
@@ -17,7 +18,7 @@ public class CountingBits {
             if(i == exponent * 2){
                 exponent *= 2;;
             }
-            res[i] = res[i - exponent] + 1;
+            res[i] = res[i - exponent] + 1; // DP step.
         }
         return res;
     }

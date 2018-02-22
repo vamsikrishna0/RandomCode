@@ -45,21 +45,21 @@ public class CombinationSumII {
         }
     }
 
-    //Not required for the simplest base case.
-    int bSearch(int[] nums, int target, int j) {
-        int i = 0;
-        int res = -1, mid;
-        while (i <= j) {
-            mid = (i + j) / 2;
-            if (nums[mid] == target) {
-                res = mid;
-                break;
-            } else if (nums[mid] > target) {
-                j = mid - 1;
-            } else {
-                i = mid + 1;
-            }
-        }
-        return res;
-    }
+//    //Not required for the simplest base case.
+//    int bSearch(int[] nums, int target, int j) {
+//        int i = 0;
+//        int res = -1, mid;
+//        while (i <= j) {
+//            mid = (i + j) / 2;
+//            if (nums[mid] == target) {
+//                res = mid;
+//                break;
+//            } else if (nums[mid] > target) {
+//                j = mid - 1;
+//            } else {
+//                i = mid + 1;
+//            }
+//        }
+//        return res;
+//    }
 }

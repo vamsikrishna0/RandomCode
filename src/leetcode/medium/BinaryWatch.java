@@ -45,26 +45,32 @@ public class BinaryWatch {
     }
 
     //hours maxValue = 11, mins maxValue = 59
-    List<String> getNumWithBits(int numBits, boolean isHours) {
+    //This method gets the list of possible strings with numOfBitsSet number of bits set. There is also a switch for either mins or hours
+    List<String> getNumWithBits(int numOfBitsSet, boolean isHours) {
         List<String> res = new ArrayList<>();
-        if (numBits < 0)
+        if (numOfBitsSet < 0)
             return res;
         int n;
-        if (isHours)
+
+        if (isHours) {
             n = 11;
-        else
-            n = 59;
-        while (n >= 0) {
-            int p = Integer.bitCount(n);
-            if (p == numBits) {
-                if (isHours) {
+            while (n >= 0) {
+                int p = Integer.bitCount(n);
+                if (p == numOfBitsSet) {
                     res.add("" + n);
-                } else {
+                }
+                n--;
+            }
+        }else{
+            n = 59;
+            while (n >= 0) {
+                int p = Integer.bitCount(n);
+                if (p == numOfBitsSet) {
                     if (n < 10) res.add("0" + n);
                     else res.add("" + n);
                 }
+                n--;
             }
-            n--;
         }
         return res;
     }
